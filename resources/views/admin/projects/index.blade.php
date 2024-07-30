@@ -15,6 +15,7 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Title</th>
+                    <th scope="col">Type</th>
                     <th scope="col">Programming Languages</th>
                     <th scope="col">Actions</th>
                 </tr>
@@ -25,6 +26,7 @@
                     <tr>
                         <td>{{ $project->id }}</td>
                         <td>{{ $project->title }}</td>
+                        <td>{{ $project->type_id }}</td>
                         <td>{{ $project->prog_langs }}</td>
                         <td>
                             <a href="{{Route('admin.projects.show', $project)}}" class="btn btn-primary btn-sm me-2 ms-2">Show</a>
