@@ -25,18 +25,27 @@
                 </div>
 
                 <div class="mb-3">
+                    <select class="form-select" aria-label="Default select example" name="type_id">
+                        @foreach ($types as $type)
+                            <option value="{{ $type->id }}">{{ $type->name }}</option>
+                        @endforeach
+
+                    </select>
+                </div>
+
+                <div class="mb-3">
                     <label for="prog_langs">Progamming languages used:</label>
-                    <input type="text" name="prog_langs" id="prog_langs" class="form-control" value="{{ old('title', $project->prog_langs)}}">
+                    <input type="text" name="prog_langs" id="prog_langs" class="form-control" value="{{ old('prog_langs', $project->prog_langs)}}">
                 </div>
 
                 <div class="mb-3">
                     <label for="due_to">Due to:</label>
-                    <input type="date" name="due_to" id="due_to" class="form-control" value="{{ old('title', $project->due_to)}}">
+                    <input type="date" name="due_to" id="due_to" class="form-control" value="{{ old('due_to', $project->due_to)}}">
                 </div>
 
                 <div class="mb-3">
                     <label for="url">Image URL: </label>
-                    <input type="text" name="url" id="url" class="form-control" value="{{ old('title', $project->url)}}">
+                    <input type="text" name="url" id="url" class="form-control" value="{{ old('url', $project->url)}}">
                 </div>
 
                 <input type="submit" value="@yield('page-title')" class="btn btn-primary me-2">

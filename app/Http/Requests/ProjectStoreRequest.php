@@ -26,6 +26,7 @@ class ProjectStoreRequest extends FormRequest
             "prog_langs" => ["required"],
             "due_to" => [],
             "url" => ["url", "min:3", "max:255"],
+            "type_id" => ["required", "integer", "exists:types,id"],
         ];
     }
 }
